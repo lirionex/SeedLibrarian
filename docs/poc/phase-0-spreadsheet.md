@@ -11,6 +11,8 @@ last_updated: 2026-07-25
 
 Before any code. A sheet where you manually cross two rows and read the child.
 
+> **Ready-made sheet:** [`phase-0-genetics-sandbox.xlsx`](phase-0-genetics-sandbox.xlsx) implements the model below — 8 wild plants, a live cross function (pick two parents, press F9 to roll a fresh handful of 5 seeds), Mendelian discrete + polygenic continuous + the linked hardiness/flower-size pair with crossover, and a `carrying ?` flag. Opens in Excel, Google Sheets, or LibreOffice. Start on its "How to use" tab.
+
 **Build** (the model decided on 2026-07-25 — see [genetics](../design/04-genetics.md)):
 - **Diploid throughout** — every gene has two allele columns. A plant carries what it doesn't show.
 - 6 traits:
