@@ -11,11 +11,21 @@ last_updated: 2026-07-25
 
 Before any code. A sheet where you manually cross two rows and read the child.
 
-**Build:**
-- 6 traits: `colour_hue` (continuous 0–360), `colour_sat` (continuous), `petal_form` (discrete, 3 alleles), `hardiness` (continuous), `scent` (continuous), `thorns` (discrete, dominant/recessive)
-- One linked pair: `hardiness` up pushes `flower_size` down
-- A cross function: discrete = Mendelian, continuous = midpoint of parents ± small random drift
-- 8 starting "wild" plants, each strong in one trait and poor in others
+**Build** (the model decided on 2026-07-25 — see [genetics](../design/04-genetics.md)):
+- **Diploid throughout** — every gene has two allele columns. A plant carries what it doesn't show.
+- 6 traits:
+  - `colour_hue` (continuous 0–360) — **polygenic:** keep it small for the sheet, ~2–3 loci, each a diploid pair; expressed hue = the loci summed and mapped to range
+  - `colour_sat` (continuous, polygenic, same shape)
+  - `hardiness` (continuous, polygenic)
+  - `scent` (continuous, polygenic)
+  - `petal_form` (discrete, 3 alleles, ranked dominance — highest rank present is expressed)
+  - `thorns` (discrete, dominant/recessive)
+- **One linked pair:** `hardiness` and `flower_size` sit adjacent on a chromosome and are inherited together; a small per-cross crossover probability can split them (up hardiness ↔ down flower size until then).
+- A cross function: for every gene, each parent passes **one of its two alleles at random** (Mendel); the child gets one from each. Discrete = highest-ranked allele wins. Continuous = sum the child's loci. **No separate drift term** — variation emerges from the reshuffle; add only a tiny non-heritable wobble to the displayed value. Homozygous parents should breed true; check that they do.
+- Keep **genotype → expressed value as its own column/step** (near-identity here) so Phase 1 environment can slot in.
+- Show a `carrying: ?` flag when a plant is heterozygous, to rehearse the start-legibility rule.
+- 8 starting "wild" plants, each strong in one trait and poor in others.
+- _Open:_ how many offspring per cross (1, a small handful, or many) is [still undecided](../design/open-questions.md) — sim a few per cross by hand for now and note what feels right.
 
 **Do by hand:** try to reach a specific target — say, saturated blue with no thorns — and count the generations.
 
