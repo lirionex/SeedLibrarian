@@ -24,6 +24,8 @@ Settled during the 2026-07-25 design pass (see [decisions log](decisions-log.md)
 
 **Continuous traits are polygenic.** A smooth trait like colour or hardiness is not one gene — it's the **sum of several small hidden gene-pairs**. Because it's a sum of many small contributions, offspring land on a natural bell curve, and — crucially — combining the high alleles from *both* parents can produce a child **beyond either parent** (real transgressive breeding). This is what makes "a slightly bluer blue is always possible" true through *skill*, not luck: you push a trait past your starting range by stacking, not by waiting for a lucky roll. The pool of alleles is still finite (the wild is the only source of genuinely new ones — see [wild-valley](07-wild-valley.md)), but what you can *build* from that pool is not.
 
+**Wild stock is pure lines — variation lives in the F2.** The wild plants are homozygous (both copies of each gene equal), so they breed true and a first cross of two of them is a *uniform* F1 — every seed alike. That is not a bug, it is real F1 uniformity, and it means the "select the best of a handful" pillar only bites from the **F2** onward: cross two of those hybrids (or self one) and the alleles reshuffle into a scattered handful worth choosing between. True-breeding is where the wild *starts*; the player's job is to break it open by hybridising, then re-stabilise a new line.
+
 **Variation is emergent, not sprinkled on.** There is no artificial drift RNG on continuous traits. Each cross, every gene passes **one of its two alleles at random** to each gamete (Mendel); the child gets one allele per gene from each parent. All the wobble a player sees comes from those alleles reshuffling — nothing else. The consequences are the point:
 
 - Two plants whose alleles are **fixed** (homozygous — the same value on both copies) breed **true**, every time. That is how a stabilised library line holds.
@@ -44,7 +46,8 @@ On top of that sits only a **tiny, non-heritable environmental wobble** at grow-
 | True-breeding | Homozygous lines breed true; heterozygous lines segregate |
 | Discrete genes | Multiple alleles, ranked dominance; recessives hide and resurface |
 | Trade-offs | Genetic linkage + rare crossover (see below) |
-| Offspring per cross | 3–5 seeds, segregating; grow and select the best |
+| Offspring per cross | 3–5 seeds; grow and select the best (see F1/F2 note) |
+| Wild stock | Pure (homozygous) lines — first wild cross is a uniform F1; variation emerges in the F2 |
 | Environment → expression | **Deferred to POC Phase 1** — Phase 0 is pure genetics |
 | Start legibility | Expressed traits + a "carrying: ?" flag; instruments reveal the hidden alleles |
 

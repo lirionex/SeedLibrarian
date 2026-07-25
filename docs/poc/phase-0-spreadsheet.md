@@ -26,7 +26,7 @@ Before any code. A sheet where you manually cross two rows and read the child.
 - A cross function: for every gene, each parent passes **one of its two alleles at random** (Mendel); the child gets one from each. Discrete = highest-ranked allele wins. Continuous = sum the child's loci. **No separate drift term** — variation emerges from the reshuffle; add only a tiny non-heritable wobble to the displayed value. Homozygous parents should breed true; check that they do.
 - Keep **genotype → expressed value as its own column/step** (near-identity here) so Phase 1 environment can slot in.
 - Show a `carrying: ?` flag when a plant is heterozygous, to rehearse the start-legibility rule.
-- 8 starting "wild" plants, each strong in one trait and poor in others.
+- 8 starting "wild" plants, each strong in one trait and poor in others. They are **pure lines** (homozygous), so a first wild×wild cross is a **uniform F1** — variation (and real selection among the handful) appears in the **F2**, when you cross two of the hybrids. This is expected, not a modelling error.
 - Each cross yields **3–5 offspring seeds** that segregate differently; grow them and select the best (rehearses roguing).
 
 **Do by hand:** try to reach a specific target — say, saturated blue with no thorns — and count the generations.
