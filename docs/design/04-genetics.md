@@ -44,6 +44,7 @@ On top of that sits only a **tiny, non-heritable environmental wobble** at grow-
 | True-breeding | Homozygous lines breed true; heterozygous lines segregate |
 | Discrete genes | Multiple alleles, ranked dominance; recessives hide and resurface |
 | Trade-offs | Genetic linkage + rare crossover (see below) |
+| Offspring per cross | 3–5 seeds, segregating; grow and select the best |
 | Environment → expression | **Deferred to POC Phase 1** — Phase 0 is pure genetics |
 | Start legibility | Expressed traits + a "carrying: ?" flag; instruments reveal the hidden alleles |
 

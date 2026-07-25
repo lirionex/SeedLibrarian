@@ -25,7 +25,7 @@ Before any code. A sheet where you manually cross two rows and read the child.
 - Keep **genotype → expressed value as its own column/step** (near-identity here) so Phase 1 environment can slot in.
 - Show a `carrying: ?` flag when a plant is heterozygous, to rehearse the start-legibility rule.
 - 8 starting "wild" plants, each strong in one trait and poor in others.
-- _Open:_ how many offspring per cross (1, a small handful, or many) is [still undecided](../design/open-questions.md) — sim a few per cross by hand for now and note what feels right.
+- Each cross yields **3–5 offspring seeds** that segregate differently; grow them and select the best (rehearses roguing).
 
 **Do by hand:** try to reach a specific target — say, saturated blue with no thorns — and count the generations.
 

@@ -27,6 +27,7 @@ A living record of settled design decisions. When a decision is made — here or
 
 _Append here as they are made, newest first. Format: `YYYY-MM-DD — decision — (affected part)`._
 
+- 2026-07-25 — A cross yields a small handful of offspring seeds (3–5), which segregate differently; the player grows and selects the best. Selection is a skill, mirroring real roguing. Single-child (too swingy) and large batches (too luck-free) were rejected. Resolves the offspring-count open question. — *(04-genetics, core-loop)*
 - 2026-07-25 — Start legibility: the player sees expressed traits plus a `carrying: ?` flag (something hidden, but not what); instruments reveal the actual hidden alleles over time. Full genotype visibility from the start is rejected. Resolves the "how legible at the start" open question. — *(04-genetics)*
 - 2026-07-25 — Environment → expression is deferred to POC Phase 1. Phase 0 is pure genetics. The engine keeps genotype → expressed plant as a distinct step (near-identity in Phase 0) so the environment reaction-norm slots into that seam later without a rewrite. — *(04-genetics, poc-phase-0)*
 - 2026-07-25 — Discrete genes have multiple alleles with a ranked dominance order (e.g. `petal_form` = 3 alleles); the highest-ranked allele present is expressed, lower ones ride along hidden and resurface later. — *(04-genetics)*
