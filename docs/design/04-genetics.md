@@ -14,7 +14,7 @@ last_updated: 2026-07-25
 
 *Discrete alleles* — petal form, leaf shape, thorns, growth habit. Mendelian, predictable, plannable. This is the half that makes players feel clever, and it's where recessives hide (your own library keeps secrets from you).
 
-*Continuous values* — colour (HSV), height, scent intensity, hardiness, bloom duration. These blend and drift. This is the half that never fully resolves, which is what makes standing orders inexhaustible: a slightly bluer blue is always possible.
+*Continuous values* — colour (HSV), height, scent intensity, hardiness, bloom duration. These blend and drift. This is the half that never fully resolves *within a pool*: a slightly bluer blue is always possible until you have stacked the best alleles you hold — and then a fresh wild allele is what pushes the ceiling higher. Standing orders stay long-lived because that climb is slow and because the wild keeps refilling it.
 
 ## The genetic model
 
@@ -22,7 +22,9 @@ Settled during the 2026-07-25 design pass (see [decisions log](decisions-log.md)
 
 **Every gene is a hidden pair.** You see the expressed plant; underneath, each gene holds two alleles. What surfaces depends on the gene type below. What *doesn't* surface is still there to be passed on — the recessive your best rose has been carrying for ten generations is real, and it can walk back into the light in the right cross.
 
-**Continuous traits are polygenic.** A smooth trait like colour or hardiness is not one gene — it's the **sum of several small hidden gene-pairs**. Because it's a sum of many small contributions, offspring land on a natural bell curve, and — crucially — combining the high alleles from *both* parents can produce a child **beyond either parent** (real transgressive breeding). This is what makes "a slightly bluer blue is always possible" true through *skill*, not luck: you push a trait past your starting range by stacking, not by waiting for a lucky roll. The pool of alleles is still finite (the wild is the only source of genuinely new ones — see [wild-valley](07-wild-valley.md)), but what you can *build* from that pool is not.
+**Continuous traits are polygenic.** A smooth trait like colour or hardiness is not one gene — it's the **sum of several small hidden gene-pairs**. Because it's a sum of many small contributions, offspring land on a natural bell curve, and — crucially — combining the high alleles from *both* parents can produce a child **beyond either parent** (real transgressive breeding). This is what lets you push a trait *past any individual parent* through **skill** rather than luck — you stack the highs, you don't wait for a lucky roll.
+
+**But refinement is bounded, and the wild is the only refill.** There is **no mutation** (decided 2026-07-25): an allele's *value* is never created, only inherited, so a gene pool has a **hard ceiling** — the all-best-alleles-fixed plant. Stacking climbs you toward that ceiling; it cannot pass it. Going further means collecting a *new* allele from the wild (see [wild-valley](07-wild-valley.md)), which is what makes expeditions matter and keeps the valley economically alive. So "a slightly bluer blue is always possible" is true *until you have exhausted your pool's blue*, and the wild is how you raise the roof.
 
 **Wild stock is pure lines — variation lives in the F2.** The wild plants are homozygous (both copies of each gene equal), so they breed true and a first cross of two of them is a *uniform* F1 — every seed alike. That is not a bug, it is real F1 uniformity, and it means the "select the best of a handful" pillar only bites from the **F2** onward: cross two of those hybrids (or self one) and the alleles reshuffle into a scattered handful worth choosing between. True-breeding is where the wild *starts*; the player's job is to break it open by hybridising, then re-stabilise a new line.
 
@@ -30,6 +32,8 @@ Settled during the 2026-07-25 design pass (see [decisions log](decisions-log.md)
 
 - Two plants whose alleles are **fixed** (homozygous — the same value on both copies) breed **true**, every time. That is how a stabilised library line holds.
 - Plants that are **heterozygous** throw **variable** offspring — *even if the two parents look identical*, because the hidden values still segregate. Look-alikes can surprise you; that's a feature, and it's why legibility instruments matter (below).
+
+**Traits do not decay on their own — neglected lines do.** Because no new allele values appear, a pool's *diversity* can only shrink over time: alleles are lost when they aren't passed on. Under **selection** a trait climbs and holds (you keep the carriers); a **stabilised (homozygous) line breeds true forever** and cannot drift. The one way a hard-won trait regresses is genetic drift — leaving a line heterozygous, unselected, and bred in small numbers until its best alleles are lost by chance. Two mechanics already answer this: **stabilise** the line so it breeds true, and **archive a mother seed** (mother seeds are not finite — see [decisions log](decisions-log.md)) so a banked genotype can always be regrown and is never permanently lost. Maintenance *is* the librarian's craft; drift is the cost of neglect, not an inevitability.
 
 On top of that sits only a **tiny, non-heritable environmental wobble** at grow-time — small enough that it never masks the genetic signal. (It is a placeholder seam for the deferred environment system, not a game knob.)
 
